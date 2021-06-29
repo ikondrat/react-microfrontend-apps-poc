@@ -19,6 +19,35 @@ npx create-react-app container --template typescript --with-npm && npx create-re
 
 ### Introduced webpack5 from the CRA feature-branch 
 Created `npm-shrinkwrap.json` for every package 
+```
+{
+  "dependencies": {
+    "react-scripts": {
+      "version": "4.0.3",
+      "from": "https://gitpkg.now.sh/facebook/create-react-app/packages/react-scripts?wp5",
+      "dependencies": {
+        "react-dev-utils": {
+          "version": "11.0.4",
+          "from": "https://gitpkg.now.sh/facebook/create-react-app/packages/react-dev-utils?wp5",
+          "dependencies": {
+            "react-error-overlay": {
+              "version": "6.0.9",
+              "from": "https://gitpkg.now.sh/facebook/create-react-app/packages/react-error-overlay?wp5",
+              "dependencies": {
+                "anser": { "version": "^2.0.1" },
+                "cross-env": { "version": "^7.0.3" },
+                "fork-ts-checker-webpack-plugin": { "version": "^6.2.10" },
+                "raw-loader": { "version": "^4.0.2" },
+                "settle-promise": { "version": "^1.0.0" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
 Introduced patch for react-error-overlay for every package
 ```
 "postinstall": "cd node_modules/react-scripts/node_modules/react-dev-utils/node_modules/react-error-overlay && NODE_ENV=production node build.js"
