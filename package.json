@@ -1,0 +1,12 @@
+{
+  "name": "mf-app-discovery",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start": "lerna run start",
+    "test": "lerna run --parallel test",
+    "install": "npx lerna exec --parallel -- npm i"
+  }
+}
