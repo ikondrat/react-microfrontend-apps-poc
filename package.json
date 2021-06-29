@@ -7,6 +7,6 @@
   "scripts": {
     "start": "lerna run start",
     "test": "lerna run --parallel test",
-    "install": "npx lerna exec --parallel -- npm i"
+    "install": "npm i && npx lerna exec --parallel -- npm i"
   }
 }
